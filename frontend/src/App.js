@@ -25,10 +25,11 @@ import CatalogsManagement from "./pages/admin/CatalogsManagement";
 import SiteSettings from "./pages/admin/SiteSettings";
 
 function App() {
+  const basename = (process.env.PUBLIC_URL || "").replace(/^https?:\/\/[^/]+/, "") || "/";
   return (
     <AuthProvider>
       <LanguageProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={
