@@ -1,0 +1,84 @@
+# WolfTerm Website - Dosya Yapısı
+
+## Frontend Dosyaları (React)
+
+### Ana Dosyalar
+- frontend/package.json - Bağımlılıklar
+- frontend/.env - Ortam değişkenleri
+- frontend/src/App.js - Ana uygulama
+- frontend/src/index.js - Giriş noktası
+- frontend/src/App.css - Genel stiller
+- frontend/src/index.css - Tailwind & temel CSS
+
+### Sayfalar (frontend/src/pages/)
+- Home.jsx - Ana sayfa
+- Catalog.jsx - Ürün kataloğu
+- ProductDetail.jsx - Ürün detay sayfası
+- About.jsx - Hakkımızda
+- Reviews.jsx - Müşteri yorumları
+
+### Admin Sayfaları (frontend/src/pages/admin/)
+- AdminLogin.jsx - Admin giriş sayfası
+- Dashboard.jsx - Admin dashboard
+- ProductsManagement.jsx - Ürün yönetimi
+- ReviewsManagement.jsx - Yorum yönetimi
+- CategoriesManagement.jsx - Kategori yönetimi
+- HeroSlidesManagement.jsx - Hero slider yönetimi
+- SiteSettings.jsx - Site ayarları
+
+### Bileşenler (frontend/src/components/)
+- Header.jsx - Üst menü
+- Footer.jsx - Alt bilgi
+- ProtectedRoute.jsx - Korumalı route
+- admin/AdminLayout.jsx - Admin paneli layout
+- ui/* - Shadcn UI bileşenleri (60+ bileşen)
+
+### Context & Services
+- context/AuthContext.js - Authentication yönetimi
+- context/LanguageContext.js - Çoklu dil yönetimi
+- services/api.js - Public API servisleri
+- services/adminApi.js - Admin API servisleri
+
+### Mock Data
+- mock/data.js - Örnek veriler ve çeviriler
+
+## Backend Dosyaları (FastAPI + Python)
+
+### Ana Dosyalar
+- backend/server.py - FastAPI ana sunucu
+- backend/requirements.txt - Python bağımlılıkları
+- backend/.env - Ortam değişkenleri
+
+### API Routes
+- backend/routes.py - Public API endpoint'leri
+- backend/admin_routes.py - Admin API endpoint'leri
+
+### Modeller & Auth
+- backend/models.py - Pydantic veri modelleri
+- backend/auth.py - JWT authentication
+
+### Veritabanı
+- backend/seed_data.py - Veritabanı başlangıç verisi
+
+## Özellikler
+
+✅ Tam responsive tasarım
+✅ 4 dil desteği (RU, EN, IT, TR)
+✅ JWT authentication
+✅ CRUD işlemleri
+✅ Hero slider yönetimi
+✅ Site ayarları yönetimi
+✅ Ürün arama
+✅ Kategori filtreleme
+✅ Admin dashboard
+✅ Modern UI (Shadcn)
+
+## Kurulum Talimatları
+
+WOLFTERM_README.md dosyasına bakınız.
+
+## Admin Giriş
+
+URL: http://localhost:3000/admin/login
+Kullanıcı: admin
+Şifre: admin123

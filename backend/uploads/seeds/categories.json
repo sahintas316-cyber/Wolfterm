@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hermetik-klasik-tip",
+    "name": "Hermetik Klasik Tip",
+    "nameEn": "Hermetik Klasik Tip",
+    "nameIt": "Hermetik Klasik Tip",
+    "nameTr": "Hermetik Klasik Tip",
+    "icon": "flame",
+    "image": "/uploads/kombi/hermetik-klasik-tip/img-1.jpg"
+  },
+  {
+    "id": "tam-yogusmali-premix-tip",
+    "name": "Tam Yoğuşmalı Premix Tip",
+    "nameEn": "Tam Yoğuşmalı Premix Tip",
+    "nameIt": "Tam Yoğuşmalı Premix Tip",
+    "nameTr": "Tam Yoğuşmalı Premix Tip",
+    "icon": "flame",
+    "image": "/uploads/kombi/tam-yogusmali-premix-tip/img-1.jpg"
+  },
+  {
+    "id": "ilk-tasarim",
+    "name": "İlk tasarım",
+    "nameEn": "İlk tasarım",
+    "nameIt": "İlk tasarım",
+    "nameTr": "İlk tasarım",
+    "icon": "flame",
+    "image": "/uploads/kombi/ilk-tasarim/img-1.jpg"
+  },
+  {
+    "id": "kombi-genel",
+    "name": "Kombi Genel",
+    "nameEn": "Kombi Genel",
+    "nameIt": "Kombi Genel",
+    "nameTr": "Kombi Genel",
+    "icon": "flame",
+    "image": "/uploads/kombi/kombi-genel/img-1.jpg"
+  }
+]

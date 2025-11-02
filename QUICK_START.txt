@@ -1,0 +1,73 @@
+╔════════════════════════════════════════════════════════════╗
+║         WOLFTERM - HIZLI YAYINLAMA REHBERİ                ║
+╚════════════════════════════════════════════════════════════╝
+
+📦 HAZIR DOSYALAR:
+═══════════════════════════════════════════════════════
+✅ /app/frontend_deploy.zip (794 KB) - Frontend
+✅ /app/backend_deploy.zip (9.8 KB) - Backend
+✅ /app/RAILWAY_SETUP.txt - Detaylı setup
+✅ /app/PLESK_DEPLOYMENT.md - Plesk rehberi
+
+🚀 5 DAKİKADA YAYINLAMA:
+═══════════════════════════════════════════════════════
+
+ADIM 1: Frontend Deploy (30 saniye)
+───────────────────────────────────────────────────────
+1. https://app.netlify.com/drop
+2. frontend_deploy.zip dosyasını sürükle-bırak
+3. Site URL'ini kopyala: https://XXXX.netlify.app
+   ✅ HEMEN ÇALIŞIR!
+
+ADIM 2: MongoDB Kurulum (3 dakika)
+───────────────────────────────────────────────────────
+1. https://www.mongodb.com/cloud/atlas/register
+2. "Create Free Cluster"
+3. Add Database User: wolfterm / şifreniz
+4. Network Access: 0.0.0.0/0 ekle
+5. Connection string kopyala
+
+ADIM 3: Backend Deploy (2 dakika)
+───────────────────────────────────────────────────────
+SEÇENEK A: Railway (Önerilen)
+  1. https://railway.app/new
+  2. "Empty Project" > "Deploy from GitHub"
+  3. Backend dosyalarını yükle
+  4. Environment variables ekle
+  5. Domain oluştur
+
+SEÇENEK B: Render (Alternatif)
+  1. https://render.com
+  2. "New +" > "Web Service"
+  3. Backend dosyalarını yükle
+  4. Start command: uvicorn server:app --host 0.0.0.0 --port $PORT
+
+ADIM 4: Bağlantıyı Kur (30 saniye)
+───────────────────────────────────────────────────────
+1. Netlify > Site Settings > Environment Variables
+   REACT_APP_BACKEND_URL = [Railway/Render URL]
+2. Redeploy
+
+═══════════════════════════════════════════════════════
+✅ TAMAMLANDI!
+
+📱 Site: https://your-site.netlify.app
+🔐 Admin: https://your-site.netlify.app/admin/login
+   Username: admin
+   Password: admin123
+
+═══════════════════════════════════════════════════════
+
+💡 İPUÇLARI:
+• Test için şimdi Netlify kullanın
+• Backend için Railway ücretsiz (500 saat/ay)
+• Production'a geçince Plesk'e taşıyın
+• MongoDB Atlas ücretsiz 512MB
+
+🎯 SONRAKİ ADIMLAR:
+1. Admin panelinden logo değiştir
+2. Ürünleri düzenle
+3. Hero slider'ı güncelle
+4. Hazır olunca domain bağla
+
+═══════════════════════════════════════════════════════

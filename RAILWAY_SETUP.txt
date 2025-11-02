@@ -1,0 +1,50 @@
+===========================================
+BACKEND RAILWAY DEPLOYMENT (5 Dakika)
+===========================================
+
+ADIM 1: MongoDB Atlas
+---------------------
+1. https://www.mongodb.com/cloud/atlas/register
+2. Create Free Cluster
+3. Database Access > Add User
+   Username: wolfterm
+   Password: [güçlü şifre]
+4. Network Access > Add IP: 0.0.0.0/0
+5. Connect > Get Connection String:
+   mongodb+srv://wolfterm:SIFRE@cluster0.xxxxx.mongodb.net/wolfterm
+
+ADIM 2: Railway Backend
+---------------------
+1. https://railway.app/new (GitHub ile giriş)
+
+2. "Empty Project" > "Deploy from GitHub repo"
+
+3. Repository yoksa: "Import from GitHub"
+   - Backend dosyalarını GitHub'a yükleyin önce
+
+4. Settings > Environment Variables:
+   MONGO_URL = mongodb+srv://wolfterm:SIFRE@...
+   DB_NAME = wolfterm
+   SECRET_KEY = your-secret-key-here
+   PORT = 8001
+   CORS_ORIGINS = *
+
+5. Settings > Deploy:
+   Start Command: uvicorn server:app --host 0.0.0.0 --port $PORT
+   Watch Paths: **/*
+
+6. Settings > Networking:
+   Generate Domain > Kopyala!
+   Örnek: wolfterm-backend-production.up.railway.app
+
+ADIM 3: Frontend'i Güncelle
+---------------------
+1. Netlify Dashboard > Site Settings > Environment Variables
+   REACT_APP_BACKEND_URL = https://wolfterm-backend-XXXX.railway.app
+
+2. Deploys > Trigger Deploy
+
+TAMAMLANDI! 🎉
+Frontend: https://your-site.netlify.app
+Backend: https://your-backend.railway.app
+Admin: https://your-site.netlify.app/admin/login
