@@ -21,31 +21,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: wolfrem-main/frontend/package-lock.json
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
-        working-directory: wolfrem-main/frontend
+        working-directory: frontend
         run: npm ci
 
       - name: Build
-        working-directory: wolfrem-main/frontend
+        working-directory: frontend
         env:
           REACT_APP_BACKEND_URL: ${{ vars.REACT_APP_BACKEND_URL }}
           PUBLIC_URL: https://sahintas316-cyber.github.io/Wolfterm
+          CI: false
         run: npm run build
 
       - name: Add SPA fallback (404.html)
-        run: cp wolfrem-main/frontend/build/index.html wolfrem-main/frontend/build/404.html
+        run: cp frontend/build/index.html frontend/build/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: wolfrem-main/frontend/build
+          path: frontend/build
 
   deploy:
     environment:
