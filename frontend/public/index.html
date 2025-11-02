@@ -6,12 +6,25 @@
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="WolfTerm Solutions - Avrupa kalitesinde ısıtma sistemleri. Yoğuşmalı ve yoğuşmasız kombiler, gazlı kazanlar." />
         <title>WolfTerm Solutions | Avrupa Kalitesinde Isıtma Sistemleri</title>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the testing, please do not edit or remove them
-        -->
-        <script src="https://unpkg.com/rrweb@latest/dist/rrweb.min.js"></script>
-        <script src="https://d2adkz2s9zrlge.cloudfront.net/rrweb-recorder-20250919-1.js"></script>
+        <script>
+            // Load emergent helper only when explicitly enabled by env
+            if ('%REACT_APP_ENABLE_EMERGENT%' === 'true') {
+                var emergentScript = document.createElement('script');
+                emergentScript.src = 'https://assets.emergent.sh/scripts/emergent-main.js';
+                document.head.appendChild(emergentScript);
+            }
+
+            // Load rrweb recorder only when explicitly enabled by env
+            if ('%REACT_APP_ENABLE_RRWEB%' === 'true') {
+                var rrwebLib = document.createElement('script');
+                rrwebLib.src = 'https://unpkg.com/rrweb@latest/dist/rrweb.min.js';
+                document.head.appendChild(rrwebLib);
+
+                var rrwebRecorder = document.createElement('script');
+                rrwebRecorder.src = 'https://d2adkz2s9zrlge.cloudfront.net/rrweb-recorder-20250919-1.js';
+                document.head.appendChild(rrwebRecorder);
+            }
+        </script>
         <!--
         These two scripts have been added for the Visual Edits, please do not edit or remove them
         -->
