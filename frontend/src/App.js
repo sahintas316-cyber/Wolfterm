@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import { AuthProvider } from "./context/AuthContext";
 import { Toaster } from "./components/ui/sonner";
@@ -25,11 +25,10 @@ import CatalogsManagement from "./pages/admin/CatalogsManagement";
 import SiteSettings from "./pages/admin/SiteSettings";
 
 function App() {
-  const basename = (process.env.PUBLIC_URL || "").replace(/^https?:\/\/[^/]+/, "") || "/";
   return (
     <AuthProvider>
       <LanguageProvider>
-        <BrowserRouter basename={basename}>
+        <HashRouter>
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={
@@ -128,7 +127,7 @@ function App() {
             </Route>
           </Routes>
           <Toaster />
-        </BrowserRouter>
+        </HashRouter>
       </LanguageProvider>
     </AuthProvider>
   );
